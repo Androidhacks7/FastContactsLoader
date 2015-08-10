@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="contact_colors">
+        <item>#0035c6</item>
+        <item>#CD0000</item>
+        <item>#914D87</item>
+        <item>#EDDA74</item>
+        <item>#4E9258</item>
+        <item>#EE9A4D</item>
+        <item>#43C6DB</item>
+    </array>
+    <color name="dark_green">#14A176</color>
+
+</resources>
