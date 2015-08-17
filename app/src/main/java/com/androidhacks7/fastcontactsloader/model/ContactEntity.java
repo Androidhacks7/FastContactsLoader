@@ -4,7 +4,7 @@ package com.androidhacks7.fastcontactsloader.model;
 import com.androidhacks7.fastcontactsloader.AppConstants;
 
 /**
- *
+ * Created by androidhacks7 on 8/7/2015.
  */
 public class ContactEntity {
 

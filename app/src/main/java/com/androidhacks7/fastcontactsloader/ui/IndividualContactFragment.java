@@ -18,7 +18,7 @@ import com.androidhacks7.fastcontactsloader.model.Contact;
 import java.util.Random;
 
 /**
- *
+ * Created by androidhacks7 on 8/7/2015.
  */
 public class IndividualContactFragment extends Fragment {
 

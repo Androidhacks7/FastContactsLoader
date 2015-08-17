@@ -14,7 +14,7 @@ import android.widget.TextView;
 import com.androidhacks7.fastcontactsloader.R;
 
 /**
- *
+ * Created by androidhacks7 on 8/7/2015.
  */
 public class LocalContactsAdapter extends CursorAdapter {
 

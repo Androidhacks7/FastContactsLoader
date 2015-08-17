@@ -5,6 +5,7 @@ import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.support.v4.view.MenuCompat;
 import android.view.Menu;
 import android.widget.SearchView;
 
@@ -13,11 +14,12 @@ import com.androidhacks7.fastcontactsloader.model.Contact;
 import com.androidhacks7.fastcontactsloader.ui.ContactListFragment;
 
 /**
- *
+ * Created by androidhacks7 on 8/7/2015.
  */
 public class ContactsActivity extends Activity implements ContactSelectListener {
 
     private ContactListFragment contactListFragment;
+    private SearchView searchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +39,7 @@ public class ContactsActivity extends Activity implements ContactSelectListener 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_contacts, menu);
-        SearchView searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
+        searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -67,6 +69,9 @@ public class ContactsActivity extends Activity implements ContactSelectListener 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == AppConstants.INDIVIDUAL_CONTACT_ACTIVITY) {
+            if (searchView != null) {
+                searchView.setIconified(true);
+            }
             contactListFragment.onSearch("");
         }
     }

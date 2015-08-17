@@ -9,7 +9,7 @@ import com.androidhacks7.fastcontactsloader.model.Contact;
 import com.androidhacks7.fastcontactsloader.ui.IndividualContactFragment;
 
 /**
- *
+ * Created by androidhacks7 on 8/7/2015.
  */
 public class IndividualContactActivity extends Activity {
 

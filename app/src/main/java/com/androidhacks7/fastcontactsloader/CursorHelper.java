@@ -12,7 +12,7 @@ import com.androidhacks7.fastcontactsloader.model.ContactEntity;
 import java.util.LinkedList;
 
 /**
- *
+ * Created by androidhacks7 on 8/7/2015.
  */
 public class CursorHelper {
 

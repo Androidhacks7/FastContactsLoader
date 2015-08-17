@@ -6,7 +6,7 @@ import android.os.Parcelable;
 import java.util.LinkedList;
 
 /**
- *
+ * Created by androidhacks7 on 8/7/2015.
  */
 public class Contact implements Parcelable {
 

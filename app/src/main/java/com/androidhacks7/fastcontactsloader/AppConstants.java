@@ -1,7 +1,7 @@
 package com.androidhacks7.fastcontactsloader;
 
 /**
- * Created by nareshkumar.mr on 8/7/2015.
+ * Created by androidhacks7 on 8/7/2015.
  */
 public class AppConstants {
 
