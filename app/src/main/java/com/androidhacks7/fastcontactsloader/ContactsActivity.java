@@ -69,8 +69,8 @@ public class ContactsActivity extends Activity implements ContactSelectListener 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == AppConstants.INDIVIDUAL_CONTACT_ACTIVITY) {
-            if (searchView != null) {
-                searchView.setIconified(true);
+            if (searchView != null && !searchView.isIconified()) {
+                onBackPressed();
             }
             contactListFragment.onSearch("");
         }

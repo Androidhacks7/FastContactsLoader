@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.CursorLoader;
 import android.database.Cursor;
 import android.database.MatrixCursor;
+import android.net.Uri;
 import android.provider.ContactsContract;
 
 import com.androidhacks7.fastcontactsloader.model.Contact;
@@ -27,15 +28,14 @@ public class CursorHelper {
 
     public CursorLoader constructLoader(Context context, String searchString) {
 
-        String selection = null;
-        String selectionArgs[] = null;
+        Uri uri = ContactsContract.CommonDataKinds.Phone.CONTENT_URI;
         if (searchString != null) {
-            selection = ContactsContract.Contacts.DISPLAY_NAME + " LIKE ? ";
-            selectionArgs = new String[]{"%" + searchString + "%"};
+            uri = Uri.withAppendedPath(ContactsContract.CommonDataKinds.Phone.CONTENT_FILTER_URI,
+                    Uri.encode(searchString));
         }
         CursorLoader cursorLoader = new CursorLoader(context,
-                ContactsContract.CommonDataKinds.Phone.CONTENT_URI, projectionFields,
-                selection, selectionArgs,
+                uri, projectionFields,
+                null, null,
                 ContactsContract.Contacts.DISPLAY_NAME + " COLLATE NOCASE ASC");
         return cursorLoader;
     }
